@@ -15,11 +15,11 @@ import org.apache.commons.lang.Validate;
  * A gravatar is a dynamic image resource that is requested from the
  * gravatar.com server. This class calculates the gravatar url and fetches
  * gravatar images. See http://en.gravatar.com/site/implement/url .
- * 
+ *
  * This class is thread-safe, Gravatar objects can be shared.
- * 
+ *
  * Usage example:
- * 
+ *
  * <code>
  * Gravatar gravatar = new Gravatar();
  * gravatar.setSize(50);
@@ -45,8 +45,8 @@ public final class Gravatar {
 	 * default size of 80 pixels is used.
 	 */
 	public void setSize(int sizeInPixels) {
-		Validate.isTrue(sizeInPixels >= 1 && sizeInPixels <= 512,
-				"sizeInPixels needs to be between 1 and 512");
+		Validate.isTrue(sizeInPixels >= 1 && sizeInPixels <= 1024,
+				"sizeInPixels needs to be between 1 and 1024");
 		this.size = sizeInPixels;
 	}
 
